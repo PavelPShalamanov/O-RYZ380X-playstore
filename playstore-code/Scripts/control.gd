@@ -9,23 +9,29 @@ func _ready() -> void:
 	
 
 func _on_open_play_store_button_button_down() -> void:
-	openPS.disabled = true
-	openPS.visible = false
+	#openPS.disabled = true
+	#openPS.visible = false
+	print("Entered")
+	openPS.hide()
 	
-	welcomeText.visible = true
+	#welcomeText.visible = true
+	welcomeText.show()
 	
-	exitPS.disabled = false
-	exitPS.visible = true
+	#exitPS.disabled = false
+	#exitPS.visible = true
+	exitPS.show()
 
 
 func _on_exit_play_store_button_button_down() -> void:
-	openPS.disabled = false
-	openPS.visible = true
+	#openPS.disabled = false
+	#openPS.visible = true
+	print("exited")
+	openPS.show()
 	
-	welcomeText.visible = false
-	
-	exitPS.disabled = true
-	exitPS.visible = false
-	
+	#welcomeText.visible = false
+	welcomeText.hide()
+	#exitPS.disabled = true
+	#exitPS.visible = false
+	exitPS.hide()
 func add_buttons():
 	pass

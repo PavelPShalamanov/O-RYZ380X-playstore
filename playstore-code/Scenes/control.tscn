@@ -41,7 +41,6 @@ offset_left = 34.0
 offset_top = 26.0
 offset_right = 83.0
 offset_bottom = 49.0
-disabled = true
 text = "Exit playstore"
 
 [connection signal="button_down" from="OpenPlayStoreButton" to="." method="_on_open_play_store_button_button_down"]
