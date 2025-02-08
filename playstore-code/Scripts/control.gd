@@ -6,6 +6,9 @@ extends Control
 @onready var Game_button = preload("res://scenes/game_button.tscn")
 @onready var game_buttons = $VBoxContainer
 
+@onready var game_details_page = $Game_details
+
+var selected = 1
 var game_num = 1
 
 var game_folder = "games"
@@ -44,5 +47,7 @@ func add_buttons():
 		currentHbox.add_child(node)
 		currentHBoxGames += 1 if currentHBoxGames < 1 else -1
 		
-		#node.connect("game_selected", )
+		node.connect("game_selected", game_details_page._on_game_selected)
+		node.add_game_number(game_num, selected)
+		game_num += 1
 		

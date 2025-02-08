@@ -31,7 +31,7 @@ offset_left = 278.0
 offset_top = 73.0
 offset_right = 915.0
 offset_bottom = 167.0
-text = "WELCOME TO THE PLAYSTORE!!!!!!!"
+text = "WELCOME TO THE LOOOOOOOOOOOOOREEESTOOOOOOOORE!!!!!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -52,38 +52,46 @@ offset_top = 196.0
 offset_right = 170.0
 offset_bottom = 236.0
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Game_details" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_sf5tu")
 
-[node name="Game_icon" type="Sprite2D" parent="Panel"]
+[node name="Game_icon" type="Sprite2D" parent="Game_details"]
 
-[node name="Download" type="Button" parent="Panel"]
+[node name="Back" type="Button" parent="Game_details"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="Title" type="Label" parent="Panel"]
+[node name="Download" type="Button" parent="Game_details"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Title" type="Label" parent="Game_details"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Desc" type="Label" parent="Panel"]
+[node name="Desc" type="Label" parent="Game_details"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Publisher" type="Label" parent="Panel"]
+[node name="Publisher" type="Label" parent="Game_details"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Version" type="Label" parent="Panel"]
+[node name="Version" type="Label" parent="Game_details"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
 [connection signal="button_down" from="OpenPlayStoreButton" to="." method="_on_open_play_store_button_button_down"]
 [connection signal="button_down" from="ExitPlayStoreButton" to="." method="_on_exit_play_store_button_button_down"]
+[connection signal="pressed" from="Game_details/Back" to="Game_details" method="_on_back_pressed"]
+[connection signal="pressed" from="Game_details/Download" to="Game_details" method="_on_download_pressed"]

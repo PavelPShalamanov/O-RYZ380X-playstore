@@ -97,7 +97,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_lwt32")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Selection" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qdun5")
 }
